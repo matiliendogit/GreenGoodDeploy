@@ -25,10 +25,11 @@
 
 const config = {
   development: {
-    username: "root",
-    password: '',
-    database: "greengood_db",
-    host: "127.0.0.1",
+    username: process.env.MYSQL_USER,  // Use MYSQL_USER instead of MYSQLUSER
+    password: process.env.MYSQL_PASSWORD,
+    database: process.env.MYSQL_DATABASE,
+    host: process.env.MYSQL_HOST,
+    port: process.env.MYSQL_PORT,
     dialect: "mysql"
   },
   test: {
